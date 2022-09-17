@@ -39,6 +39,7 @@ npm run dev
 ```
 
 <aside>
+<aside>
 
 ## Incializando nossa aplicação `./web` <img height="50" src="./assets/img/ViteJS.png">
 
