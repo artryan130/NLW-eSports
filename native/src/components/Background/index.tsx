@@ -1,5 +1,5 @@
 //rnbc => cria um arquivo do tipo index react native
-
+import React from "react";
 import { ImageBackground } from "react-native";
 import backgroundImg from "../../assets/background-galaxy.png";
 import { styles } from "./styles";
