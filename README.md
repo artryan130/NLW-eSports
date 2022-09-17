@@ -42,7 +42,7 @@ npm run dev
 
 ---
 
-## Incializando nossa aplicação `./web` <img height="50" src="./assets/img/ViteJS.png">
+## Incializando nossa aplicação `./web` <img height="50" src="./assets/ViteJS.png">
 
 **Agora que já configuramos o ambiente de back-end em node, podemos incializar nosso ambiente de app em React, vamos utilizar uma ferramenta muito conhecida, o [Vite.js](https://vitejs.dev/), que é uma ferramenta que usa as bibliotecas das mais atualizadas do JS, e ainda consegue ser mais performático que instalar padronizado no próprio React!**
 
@@ -62,7 +62,7 @@ npm run dev
 
 ---
 
-## Inicializar app de `./mobile` <img height="30" src="./assets/img/expo.jpg">
+## Inicializar app de `./mobile` <img height="30" src="./assets/expo.jpg">
 
 **Agora que conseguimos fazer o app para web, ou desktop como chamar, iremos criar a configuração de building para mobile, pois queremos que ele esteja disponível em React Native para mobile! Para isso usaremos outra ferramenta que se adapta bem a mobile, que é a [Expo](https://expo.dev/)**
 
