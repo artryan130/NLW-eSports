@@ -13,17 +13,27 @@ import { TouchableOpacity, View, Image, FlatList, Text } from "react-native";
 import logoImg from "../../assets/logo-nlw-esports.png";
 import { Heading } from "../../components/Heading";
 import { DuoCard, DuoCardProps } from "../../components/DuoCard";
+import { DuoMatch } from "../../components/DuoMatch/index";
 
 export function Game() {
   const route = useRoute();
   const navigation = useNavigation();
 
   const [duos, setDuos] = useState<DuoCardProps>([]);
+  const [discordDuoSelected, setDiscordDuoSelected] = useState("");
 
   const game = route.params as GameParams;
 
   function handleGoBack() {
     navigation.goBack();
+  }
+
+  async function getDiscordUser(adsId: string) {
+    fetch(`http://192.168.100.4:3333/ads/${adsId}/discord`)
+      .then((response) => response.json())
+      .then((data) => {
+        setDiscordDuoSelected(data.discord);
+      });
   }
 
   useEffect(() => {
@@ -57,7 +67,9 @@ export function Game() {
         <FlatList
           data={duos}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }) => <DuoCard data={item} onConect={() => {}} />}
+          renderItem={({ item }) => (
+            <DuoCard data={item} onConect={() => getDiscordUser(item.id)} />
+          )}
           horizontal
           style={styles.containerList}
           contentContainerStyle={[
@@ -69,6 +81,11 @@ export function Game() {
               Não há anúncios publicados para este jogo!{" "}
             </Text>
           )}
+        />
+        <DuoMatch
+          visible={discordDuoSelected.length > 0}
+          discord={discordDuoSelected}
+          onClose={() => setDiscordDuoSelected("")}
         />
       </SafeAreaView>
     </Background>
