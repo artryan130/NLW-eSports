@@ -62,7 +62,7 @@ npm run dev
 
 ---
 
-## Inicializar app de `./mobile` <img height="30" src="./assets/expo.jpg">
+## Inicializar app de `./native` <img height="30" src="./assets/expo.jpg">
 
 **Agora que conseguimos fazer o app para web, ou desktop como chamar, iremos criar a configuração de building para mobile, pois queremos que ele esteja disponível em React Native para mobile! Para isso usaremos outra ferramenta que se adapta bem a mobile, que é a [Expo](https://expo.dev/)**
 
